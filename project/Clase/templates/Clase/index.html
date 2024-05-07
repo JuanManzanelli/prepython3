@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase</title>
-</head>
-<body>
-    <h1>Estudiante</h1>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block titulo%}
+     Estudiantes
+{% endblock titulo %}
+
     {% for estudiante in estudiantes %}
             <h2>{{estudiante.nombre}}</h2>
     {% endfor %}
