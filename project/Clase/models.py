@@ -26,6 +26,6 @@ class Comision(models.Model):
     profesor = models.ForeignKey(Profesor, on_delete=models.SET_NULL, null=True, blank=True)
     estudiante = models.ManyToManyField(Estudiante)
 
-    def __str__(self) -> str:
-        return str(self.nombre)
+    def __str__(self):
+        return f"{self.nombre}, {self.curso}, {self.profesor}, {self.estudiante}"
     

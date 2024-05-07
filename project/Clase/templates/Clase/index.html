@@ -1,13 +1,23 @@
 {% extends 'core/base.html' %}
-{% load static %}
-
-{% block titulo%}
-     Estudiantes
+{% block titulo %}
+    Comision
 {% endblock titulo %}
-
-    {% for estudiante in estudiantes %}
-            <h2>{{estudiante.nombre}}</h2>
-    {% endfor %}
-
-</body>
-</html>
+{% block contenido %}
+    <div class="row row-cols-1 row-cols-md-2">
+        {% for cliente in clientes %}
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ comision.nombre }} {{ comision.curso }}</h2>
+                        <p class="card-text text-muted">Pofesor: {{ comision.profesor }}</p>
+                        {% if cliente.pais_origen_id %}
+                            <p class="card-text">{{ comision }}</p>
+                        {% else %}
+                            
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock contenido %}
