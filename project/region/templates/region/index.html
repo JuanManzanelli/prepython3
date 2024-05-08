@@ -2,6 +2,7 @@
 {% block titulo%}
      Regiones
 {% endblock titulo %}
+
 {% block contenido %}
     <div class="fs-3 pb-4 ">
         <a href="{% url 'region:regioncategoria_create' %}">Crear categorias de regiones</a>
@@ -9,4 +10,7 @@
     <ul>
         {% for region in regiones %} <li>{{ region }}</li>{% endfor %}
     </ul>
+    {% comment  %}
+        <a href="{% url 'core:home' %}">ir a home</a>
+    {% endcomment %}
 {% endblock contenido %}
