@@ -13,3 +13,4 @@ class RegionCategoria(models.Model):
     class Meta:
         verbose_name = "region del curso"
         verbose_name_plural= "regiones de curso"
+        

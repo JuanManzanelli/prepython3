@@ -1,14 +1,12 @@
 {% extends 'core/base.html' %}
-{% load static %}
-
 {% block titulo%}
-     region
+     Regiones
 {% endblock titulo %}
-    
-    {% for region in regiones %}
-        <p>{{ region }}</p>
-    {% endfor %}
-    <p></p>
-    
-</body>
-</html>
+{% block contenido %}
+    <div class="fs-3 pb-4 ">
+        <a href="{% url 'region:regioncategoria_create' %}">Crear categorias de regiones</a>
+    </div>
+    <ul>
+        {% for region in regiones %} <li>{{ region }}</li>{% endfor %}
+    </ul>
+{% endblock contenido %}
