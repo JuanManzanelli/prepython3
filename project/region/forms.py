@@ -7,6 +7,6 @@ from . import models
 #  zona = forms.CharField()
 
 class RegionCategoriaForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = models.RegionCategoria
         fields = ["nombre","zona"]
