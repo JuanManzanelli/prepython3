@@ -20,7 +20,7 @@ class Profesor (models.Model):
         return self.nombre
 
 
-class Comision(models.Model):
+class ClaseCategoria(models.Model):
     nombre = models.PositiveIntegerField(unique=True)
     curso = models.ForeignKey(Curso, on_delete=models.SET_NULL, null=True, blank=True)
     profesor = models.ForeignKey(Profesor, on_delete=models.SET_NULL, null=True, blank=True)
@@ -28,4 +28,8 @@ class Comision(models.Model):
 
     def __str__(self):
         return f"{self.nombre}, {self.curso}, {self.profesor}, {self.estudiante}"
+    
+    class Meta:
+        verbose_name= "categoria de clase"
+        verbose_name_plural = "categorias de clases"
     
